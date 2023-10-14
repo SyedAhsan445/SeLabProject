@@ -15,6 +15,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
     options.UseSqlServer(connectionString));
 builder.Services.AddDbContext<ClothXDbContext>(options =>
     options.UseSqlServer(connectionString));
+
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 builder.Services.AddIdentity<IdentityUser, IdentityRole>(options => options.SignIn.RequireConfirmedAccount = true)
@@ -24,7 +25,7 @@ builder.Services.AddSingleton<IAuthorizationHandler, ClothXPermissionAuthorizati
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
 
-NLogBuilder.ConfigureNLog("nlog.config");
+//NLogBuilder.ConfigureNLog("nlog.config");
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

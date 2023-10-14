@@ -30,12 +30,12 @@ namespace ClothX.Data
 
             user.EmailConfirmed = true;
             user.Email = "admin@admin.com";
-            user.UserName = "admin";
+            user.UserName = "admin@admin.com";
 
             var userInDb = await userManager.FindByEmailAsync(user.Email);
             if (userInDb == null)
             {
-                var result = await userManager.CreateAsync(user, "admin@123");
+                var result = await userManager.CreateAsync(user, "Admin@123");
                 await userManager.AddToRoleAsync(user, RoleType.Tailor.ToString());
                 string userId = db.AspNetUsers.Where(x => x.Email == user.Email && x.PasswordHash == user.PasswordHash).FirstOrDefault().Id;
                 userProfile.UserId = userId;
