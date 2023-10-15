@@ -5,6 +5,30 @@
       "PackagePath": "staticwebassets\\ClothX.bundle.scp.css"
     },
     {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\Images\\DefaultUser.png",
+      "PackagePath": "staticwebassets\\Images\\DefaultUser.png"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\Images\\ProjectImages\\3caa6138-a82c-4e4e-8da1-4eb38a963835.png",
+      "PackagePath": "staticwebassets\\Images\\ProjectImages\\3caa6138-a82c-4e4e-8da1-4eb38a963835.png"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\Images\\ProjectImages\\8819a5eb-a9ae-42e4-9a89-0d8127274b66.png",
+      "PackagePath": "staticwebassets\\Images\\ProjectImages\\8819a5eb-a9ae-42e4-9a89-0d8127274b66.png"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\Images\\ProjectImages\\8da2eefa-b994-429e-93d7-e7754b3c3e95.png",
+      "PackagePath": "staticwebassets\\Images\\ProjectImages\\8da2eefa-b994-429e-93d7-e7754b3c3e95.png"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\Images\\logo-transparent.png",
+      "PackagePath": "staticwebassets\\Images\\logo-transparent.png"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\Images\\logo.png",
+      "PackagePath": "staticwebassets\\Images\\logo.png"
+    },
+    {
       "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

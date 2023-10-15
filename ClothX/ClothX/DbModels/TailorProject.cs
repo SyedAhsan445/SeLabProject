@@ -21,6 +21,7 @@ namespace ClothX.DbModels
         public bool? IsActive { get; set; }
         public string? ImagePath { get; set; }
 
+        public virtual ProductCategory ProductCategory { get; set; } = null!;
         public virtual ICollection<Review> Reviews { get; set; }
         public virtual ICollection<TailorProjectImage> TailorProjectImages { get; set; }
     }

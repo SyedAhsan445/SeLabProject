@@ -19,14 +19,16 @@ namespace ClothX.Services
 
         private UploadFileService() { }
 
-        public async Task<string> AddImageToFolder(IFormFile image, List<FilePathEnum> folderPath, IWebHostEnvironment webHost)
+        public async Task<string> UploadFile(IFormFile image, List<FilePathEnum> folderPath, IWebHostEnvironment webHost)
         {
             var webRootPath = webHost.WebRootPath;
             string path = "";
+            string path2 = "";
             foreach (var fPath in folderPath)
             {
-                path += fPath.ToString();
+                path = Path.Combine(path, fPath.ToString());
             }
+            path2 = path;
             var WebFolder = Path.Combine(webRootPath, path);
 
             if (!Directory.Exists(WebFolder))
@@ -35,16 +37,18 @@ namespace ClothX.Services
             }
 
             var imagesFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", path);
-            var fileName = Path.Combine(imagesFolder, $"{Guid.NewGuid().ToString()}{Path.GetExtension(image.FileName)}");
+            string uniquefileName = $"{Guid.NewGuid().ToString()}{Path.GetExtension(image.FileName)}";
+            var fileName = Path.Combine(imagesFolder, uniquefileName);
 
             string uploadFilePath = Path.Combine(Directory.GetCurrentDirectory(), WebFolder, fileName);
             using (FileStream file = new FileStream(uploadFilePath, FileMode.Create))
             {
-                image.CopyTo(file);
+                await image.CopyToAsync(file);
             }
-            path = "/" + path + fileName;
 
-            return path;
+
+            string filePath ="/"+ Path.Combine(path2, uniquefileName);
+            return filePath;
         }
     }
 }

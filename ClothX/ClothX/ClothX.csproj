@@ -31,6 +31,9 @@
 
   <ItemGroup>
     <Folder Include="DbModels\" />
+    <Folder Include="wwwroot\Images\ProjectImages\" />
+    <Folder Include="wwwroot\Images\UserImages\" />
+    <Folder Include="wwwroot\Uploads\" />
   </ItemGroup>
 
 </Project>

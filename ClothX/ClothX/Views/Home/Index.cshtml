@@ -1,8 +1,139 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+
+@using ClothX.DbModels;
+@using ClothX.Utility;
+@{
+	Layout = UserUtility.Instance.GetLayout(User);
+
+	ViewData["Title"] = "Home Page";
+	List<TailorProject> tailorProjects = ViewBag.TailorProjects;
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<!--Styling Start for Tailor Projects-->
+<style>
+	@@media only screen and (max-device-width: 480px) {
+		.box {
+			margin: 20px;
+		}
+
+		.product-info {
+			margin: 20px;
+		}
+	}
+
+
+	.tailor-projects {
+		display: flex;
+		justify-content: center;
+		margin-top: 50px;
+	}
+
+
+	.box {
+		width: 700px;
+		border-radius: 10px;
+		box-shadow: 0 0 30px 0 #999;
+	}
+
+	.product-img {
+		float: left;
+		margin-top: 20px;
+		transition: all 0.5s linear;
+	}
+
+		.product-img:hover {
+			transform: scale(1.03);
+		}
+
+	.product-info {
+		float: right;
+		margin-top: 20px;
+		margin-right: 40px;
+	}
+
+	h1 {
+		margin-bottom: 50px;
+		font-weight: bold;
+		font-size: 2.5em;
+		color: #333;
+		font-family: 'Archivo Black', sans-serif;
+	}
+
+	.price {
+		margin-top: -40px;
+		font-size: 35px;
+		font-weight: bolder;
+		color: coral;
+	}
+
+	.description {
+		margin-top: -20px;
+		margin-right: 10px;
+		font-weight: bold;
+		color: #555;
+	}
+
+	.color {
+		margin-top: 25px;
+		outline: none;
+		border: 2px solid #999;
+		padding: 5px;
+		border-radius: 5px;
+	}
+
+	.qty {
+		margin-top: 25px;
+		outline: none;
+		border: 2px solid #999;
+		padding: 5px;
+		border-radius: 5px;
+	}
+
+	viewmoreBtn {
+		margin-top: 10px;
+		background: #333;
+		font-size: 1em;
+		letter-spacing: .1em;
+		text-decoration: none;
+		color: #fff;
+		padding: 15px 30px;
+		border: 0;
+		border-radius: 10px;
+		transition: all 0.3s linear;
+		margin-left: 50px;
+	}
+
+	viewmoreBtn:hover {
+		background: #666;
+	}
+
+</style>
+<!--Styling End for Tailor Projects-->
+
+<h1 class="text-center">Tailor Projects</h1>
+
+@if(UserUtility.Instance.HasAuthority("TailorProjects.Manage",User))
+{
+	<div class="d-flex justify-content-end">
+		<a class="btn btn-primary" asp-controller="Project" asp-action="Index">Manage</a>
+	</div>
+}
+
+<div class="tailor-projects">
+	@foreach (var item in tailorProjects)
+	{
+		<div class="box">
+			<div class="product-img">
+				<img src="@item.ImagePath" width="250" alt="" />
+			</div>
+			<div class="product-info">
+				<h1>@item.Title</h1>
+				<p class="price">@item.ProductCategory.Name</p>
+				<br /><br />
+				<a class="viewmoreBtn" asp-action="Details" asp-controller="Project" asp-route-Project="@item.Id">View More</a>
+			</div>
+		</div>
+	}
 </div>

@@ -1,5 +1,7 @@
-﻿using ClothX.Models;
+﻿using ClothX.DbModels;
+using ClothX.Models;
 using ClothX.Services;
+using ClothX.Utility;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -14,13 +16,25 @@ namespace ClothX.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
+            List<TailorProject> tailorProjects = new List<TailorProject>();
+            try
+            {
+                tailorProjects = await TailorProjectsUtility.Instance.getTailorProjects();
+                tailorProjects = tailorProjects.Where(x => x.IsActive == true).ToList();
+            }
+            catch (Exception ex)
+            {
+                ErrorLogger.Instance.ErrorLoggingFunction(ex.Message, this.ToString());
+            }
+            ViewBag.TailorProjects = tailorProjects;
             return View();
         }
 
         public IActionResult Privacy()
         {
+            //ErrorLogger.Instance.ErrorLoggingFunction("Unexpected", this.ToString());
             return View();
         }
 
