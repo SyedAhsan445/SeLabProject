@@ -1,4 +1,5 @@
 ﻿using ClothX.Constants;
+using ClothX.DbModels;
 using System.Security.Claims;
 
 namespace ClothX.Utility
@@ -38,6 +39,13 @@ namespace ClothX.Utility
 		public bool HasAuthority(string permission, ClaimsPrincipal? User)
 		{
 			return true;
+		}
+
+		public int getUserProfileId(string username)
+		{
+			ClothXDbContext db = new ClothXDbContext();
+			var dbUser = db.AspNetUsers.Where(x => x.UserName == username).FirstOrDefault();
+			return dbUser.UserProfiles.FirstOrDefault().Id;
 		}
 	}
 }

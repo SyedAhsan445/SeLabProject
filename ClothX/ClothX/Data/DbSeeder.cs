@@ -13,6 +13,7 @@ namespace ClothX.Data
         {
             var userManager = service.GetService<UserManager<IdentityUser>>();
             var roleManager = service.GetService<RoleManager<IdentityRole>>();
+
             await roleManager.CreateAsync(new IdentityRole(RoleType.Tailor.ToString()));
             await roleManager.CreateAsync(new IdentityRole(RoleType.User.ToString()));
 

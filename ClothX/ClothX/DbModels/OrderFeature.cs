@@ -9,5 +9,8 @@ namespace ClothX.DbModels
         public int OrderId { get; set; }
         public int FeatureId { get; set; }
         public bool? IsActive { get; set; }
+
+        public virtual Feature Feature { get; set; } = null!;
+        public virtual ClientOrder Order { get; set; } = null!;
     }
 }

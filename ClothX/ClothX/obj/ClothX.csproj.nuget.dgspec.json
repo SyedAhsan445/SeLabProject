@@ -91,11 +91,15 @@
             },
             "NLog": {
               "target": "Package",
-              "version": "[5.2.4, )"
+              "version": "[5.2.5, )"
+            },
+            "NLog.Extensions.Logging": {
+              "target": "Package",
+              "version": "[5.3.5, )"
             },
             "NLog.Web.AspNetCore": {
               "target": "Package",
-              "version": "[5.3.4, )"
+              "version": "[5.3.5, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

@@ -1,18 +1,20 @@
-﻿@model ClothX.ViewModels.TailorProjectViewModel
-@using ClothX.Utility;
+﻿@model ClothX.ViewModels.ClientOrderViewModel
+@using ClothX.DbModels;
 @{
-    Layout = UserUtility.Instance.GetLayout(User);
-    ViewData["Title"] = "AddEdit";
-    if (ViewBag.ProjectId == 0)
+    ViewData["Title"] = "Place Order";
+    if (ViewBag.OrderId == 0)
     {
-        ViewData["Title"] = "Add Project";
+        ViewData["Title"] = "Place Order";
     }
     else
     {
-        ViewData["Title"] = "Edit Project";
+        ViewData["Title"] = "Edit Order";
     }
-}
 
+    List<FeatureGroup> groups = ViewBag.Features;
+
+    ICollection<OrderFeature> orderFeatures = ViewBag.OrderFeatures;
+}
 <!-- TinyMCE -->
 <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
@@ -87,50 +89,81 @@
 </style>
 <!--Style End for Input File-->
 
+
 <div class="card">
     <div class="card-body">
         <h1 class="card-title p-3">@ViewData["Title"] </h1>
-        <form asp-action="AddEdit" enctype="multipart/form-data">
+        <form asp-action="PlaceOrder" enctype="multipart/form-data">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="col-md-12 p-3">
                 <div class="form-floating">
-                    <input asp-for="Id" value="@ViewBag.ProjectId" hidden />
+                    <input asp-for="Id" value="@ViewBag.OrderId" hidden />
                     <input asp-for="Title" class="form-control" />
                     <label asp-for="Title" class="control-label"></label>
                     <span asp-validation-for="Title" class="text-danger"></span>
                 </div>
             </div>
             <div class="row p-3">
-                <div class="col-md-6 p-3">
+                <div class="col-md-6">
                     <div class="form-floating">
-                        <select asp-for="ProductCategoryId" class="form-select" asp-items="ViewBag.ProjectCategory">
+                        <select asp-for="OrderType" class="form-select" asp-items="ViewBag.ProjectCategory">
                         </select>
-                        <label asp-for="ProductCategoryId" class="control-label"></label>
-                        <span asp-validation-for="ProductCategoryId" class="text-danger"></span>
+                        <label asp-for="OrderType" class="control-label"></label>
+                        <span asp-validation-for="OrderType" class="text-danger"></span>
                     </div>
                 </div>
-                <div class="col-md-6 p-3">
-                    <div class="button-wrap">
-                        <label class="button" for="upload">Upload File</label>
-                        
-                        @if(ViewBag.ProjectId==0)
-                        {
-                            <input id="upload" required accept="image/*" asp-for="image" name="image" type="file">
-                            <span id="selectedFile">No File Selected</span>
-                        }
-                        else
-                        {
-                            <input id="upload" accept="image/*" asp-for="image" name="image" type="file">
-                            <span id="selectedFile"></span>
-                        }
+                <div class="col-md-6">
+                    <div class="form-floating">
+                        <input asp-for="Measurements" class="form-control" />
+                        <label asp-for="Measurements" class="control-label"></label>
+                        <span asp-validation-for="Measurements" class="text-danger"></span>
                     </div>
                 </div>
             </div>
-            <div class="col-md-12">
+
+            <div class="row p-3">
+                @foreach (var g in groups)
+                {
+                    <div class="col-md-6">
+                        <h4>@g.Name</h4>
+                        @foreach (var i in g.Features)
+                        {
+                            @if (ViewBag.OrderId==0)
+                            {
+                                <div class="form-check">
+                                    <input class="form-check-input" value="@i.Id" type="radio" name="Feature-@g.Id" id="radio-@i.Id" @Html.Raw(i==g.Features.FirstOrDefault()?"checked":"")>
+                                    <label class="form-check-label" for="radio-@i.Id">
+                                        @i.Name - @i.Price Rs
+                                    </label>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="form-check">
+                                    <input class="form-check-input" value="@i.Id" type="radio" name="Feature-@g.Id" id="radio-@i.Id" @Html.Raw(orderFeatures.Any(x=>x.FeatureId==i.Id)?"checked":"")>
+                                    <label class="form-check-label" for="radio-@i.Id">
+                                        @i.Name - @i.Price Rs
+                                    </label>
+                                </div>
+                            }
+
+                    }
+                    </div>
+                }
+            </div>
+
+            
+            
+            <div class="col-md-12 p-3">
+                <label asp-for="Description" class="control-label"></label>
+                <textarea asp-for="Description" id="tiny"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+            <div class="col-md-12 p-3">
                 <div class="button-wrap">
-                    <label class="button" for="images">Upload Images</label>
-                    <input id="images" accept="image/*" asp-for="projectImages" multiple name="projectImages" type="file">
-                    @if (ViewBag.ProjectId == 0)
+                    <label class="button" for="images">Upload Ideas</label>
+                    <input id="images" accept="image/*" asp-for="ideaImages" multiple name="ideaImages" type="file">
+                    @if (ViewBag.OrderId == 0)
                     {
                         <span id="selectedFiles">No File Selected</span>
                     }
@@ -140,44 +173,24 @@
                     }
                 </div>
             </div>
-            <div class="col-md-12 p-3">
-                <label asp-for="Description" class="control-label"></label>
-                <textarea asp-for="Description" id="tiny"></textarea>
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
             <div class="form-group p-3 d-flex justify-content-end">
-                <a class="btn btn-secondary m-1" asp-action="Index">Cancel</a> 
+                <a class="btn btn-secondary m-1" asp-action="MyOrders">Cancel</a>
                 <input type="submit" value="Save" class="btn btn-success m-1" />
             </div>
         </form>
     </div>
 </div>
 
-
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
     <script>
-        const fileInput = document.getElementById('upload');
-        const selectedFile = document.getElementById('selectedFile');
 
         const fileInput2 = document.getElementById('images');
         const selectedFile2 = document.getElementById('selectedFiles');
 
-        fileInput.addEventListener('change', function (event) {
-            const selectedFileName = event.target.files[0].name;
-            selectedFile.textContent = `Selected File: ${selectedFileName}`;
-        });
-        
         fileInput2.addEventListener('change', function (event) {
             const files = event.target.files;
             selectedFile2.textContent = `Number of selected files: ${files.length}`;
-            //selectedFile2.innerHTML = ''; // Clear the list of selected files.
-
-            //for (let i = 0; i < files.length; i++) {
-            //    const listItem = document.createElement('li');
-            //    listItem.textContent = files[i].name;
-            //    selectedFile2.appendChild(listItem);
-            //}
         });
     </script>
 }

@@ -1,4 +1,5 @@
-﻿Scaffolding String: Scaffold-DbContext "Server=(local); Database=ClothXDb; Integrated Security=True; TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutPutDir DbModels -Force
+﻿Scaffolding String: 
+Scaffold-DbContext "Server=(local); Database=ClothXDb; Integrated Security=True; TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutPutDir DbModels -Force
 
 In case:
 	Replace OnConfiguring in DbModels/DbContext File with following code

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IySXE74l2EDqqEoMsOkngNIysRc5IbIsoM6tUX6g9mQ=",
+  "Hash": "AO+gikqh0tyceAtsn3kKBvWFOekj01q1rR/vsGLuZ6U=",
   "Source": "ClothX",
   "BasePath": "_content/ClothX",
   "Mode": "Default",
@@ -1156,6 +1156,23 @@
       "OriginalItemSpec": "wwwroot\\Images\\logo-transparent.png"
     },
     {
+      "Identity": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\Images\\ProjectImages\\034314fc-162f-48ac-905a-e083ab51f01d.png",
+      "SourceId": "ClothX",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\",
+      "BasePath": "_content/ClothX",
+      "RelativePath": "Images/ProjectImages/034314fc-162f-48ac-905a-e083ab51f01d.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ProjectImages\\034314fc-162f-48ac-905a-e083ab51f01d.png"
+    },
+    {
       "Identity": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\Images\\ProjectImages\\3caa6138-a82c-4e4e-8da1-4eb38a963835.png",
       "SourceId": "ClothX",
       "SourceType": "Discovered",
@@ -1171,6 +1188,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\ProjectImages\\3caa6138-a82c-4e4e-8da1-4eb38a963835.png"
+    },
+    {
+      "Identity": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\Images\\ProjectImages\\3ef4f503-9ddc-46e9-a012-f068b067fef9.png",
+      "SourceId": "ClothX",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\",
+      "BasePath": "_content/ClothX",
+      "RelativePath": "Images/ProjectImages/3ef4f503-9ddc-46e9-a012-f068b067fef9.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ProjectImages\\3ef4f503-9ddc-46e9-a012-f068b067fef9.png"
+    },
+    {
+      "Identity": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\Images\\ProjectImages\\4f6dc0e1-8f5f-4bd7-88ff-cc5adb3c8581.png",
+      "SourceId": "ClothX",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\",
+      "BasePath": "_content/ClothX",
+      "RelativePath": "Images/ProjectImages/4f6dc0e1-8f5f-4bd7-88ff-cc5adb3c8581.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\ProjectImages\\4f6dc0e1-8f5f-4bd7-88ff-cc5adb3c8581.png"
     },
     {
       "Identity": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\Images\\ProjectImages\\8819a5eb-a9ae-42e4-9a89-0d8127274b66.png",
