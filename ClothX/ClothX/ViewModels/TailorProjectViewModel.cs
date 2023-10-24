@@ -19,8 +19,6 @@ namespace ClothX.ViewModels
 		public IFormFile? image { get; set; }
 
 		public IFormFileCollection? projectImages { get; set; }
-
-		public virtual ICollection<Review> Reviews { get; set; }
 		public virtual ICollection<TailorProjectImage> TailorProjectImages { get; set; }
 	}
 }

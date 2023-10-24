@@ -176,6 +176,26 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/Feature/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhdHVyZVxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/Feature/FeatureCreateEditPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhdHVyZVxGZWF0dXJlQ3JlYXRlRWRpdFBhcnRpYWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/Feature/FeatureGroupCreateEditPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhdHVyZVxGZWF0dXJlR3JvdXBDcmVhdGVFZGl0UGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/Feature/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVhdHVyZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/Feedback/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZGJhY2tcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -200,6 +220,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3JkZXJcUGxhY2VPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/ProductType/CreateEditPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFR5cGVcQ3JlYXRlRWRpdFBhcnRpYWxWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/ProductType/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFR5cGVcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/Project/AddEdit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvamVjdFxBZGRFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -216,12 +244,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/Shared/FeedbackPartialView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEZlZWRiYWNrUGFydGlhbFZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/Shared/_LoginPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/User/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/_ViewImports.cshtml]

@@ -10,7 +10,6 @@ namespace ClothX.DbModels
             ChatMessageSentByNavigations = new HashSet<ChatMessage>();
             ChatMessageSentToNavigations = new HashSet<ChatMessage>();
             ClientOrders = new HashSet<ClientOrder>();
-            ReviewResponses = new HashSet<ReviewResponse>();
             Reviews = new HashSet<Review>();
         }
 
@@ -31,7 +30,6 @@ namespace ClothX.DbModels
         public virtual ICollection<ChatMessage> ChatMessageSentByNavigations { get; set; }
         public virtual ICollection<ChatMessage> ChatMessageSentToNavigations { get; set; }
         public virtual ICollection<ClientOrder> ClientOrders { get; set; }
-        public virtual ICollection<ReviewResponse> ReviewResponses { get; set; }
         public virtual ICollection<Review> Reviews { get; set; }
     }
 }

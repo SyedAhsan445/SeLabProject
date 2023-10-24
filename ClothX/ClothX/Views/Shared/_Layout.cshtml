@@ -28,6 +28,18 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="MyOrders">My Orders</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Order" asp-action="ClientOrders">Client Orders</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="ProductType" asp-action="Index">Product Types</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Feature" asp-action="Index">Feature Groups</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Index">Users</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
                     </ul>
@@ -38,6 +50,7 @@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
+            <div id="feedbackDiv"></div>
             @RenderBody()
         </main>
     </div>
@@ -50,6 +63,20 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        function addFeedback(id) {
+            $.ajax({
+                type: "Get",
+                url: "/Feature/Create",
+                data: { Id: id },
+                success: function (result) {
+                    $("#addDiv").html(result);
+                    $("#FeedbackModal").modal('show');
+                }
+            })
+        }
+    </script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

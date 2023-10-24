@@ -7,7 +7,6 @@ namespace ClothX.DbModels
     {
         public TailorProject()
         {
-            Reviews = new HashSet<Review>();
             TailorProjectImages = new HashSet<TailorProjectImage>();
         }
 
@@ -22,7 +21,6 @@ namespace ClothX.DbModels
         public string? ImagePath { get; set; }
 
         public virtual ProductCategory ProductCategory { get; set; } = null!;
-        public virtual ICollection<Review> Reviews { get; set; }
         public virtual ICollection<TailorProjectImage> TailorProjectImages { get; set; }
     }
 }
