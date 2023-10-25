@@ -5,12 +5,12 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using NLog.Web;
-using ClothX.Data;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+DbSeeder.connectionString = connectionString;
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 	options.UseSqlServer(connectionString));
 builder.Services.AddDbContext<ClothXDbContext>(options =>
@@ -55,7 +55,7 @@ app.MapRazorPages();
 
 using (var scope = app.Services.CreateScope())
 {
-	DbSeeder.connectionString = connectionString;
+
 	await DbSeeder.SeedRolesAndAdminAsync(scope.ServiceProvider);
 }
 

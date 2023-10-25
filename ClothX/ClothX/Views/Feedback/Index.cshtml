@@ -1,30 +1,69 @@
-﻿@model ClothX.DbModels.Review
+﻿@model IEnumerable<ClothX.DbModels.Review>
 
 @{
 	ViewData["Title"] = "Index";
 }
 
-<h1>Feedback</h1>
-
-
 <div class="row">
-	<form asp-action="Index" method="post">
-		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
-		<div class="form-group">
-			<label asp-for="Message" class="control-label"></label>
-			<input asp-for="Message" class="form-control" />
-			<span asp-validation-for="Message" class="text-danger"></span>
-		</div>
-		<div class="form-group">
-			<input type="submit" value="Create" class="btn btn-primary" />
-		</div>
-	</form>
+	<div class="col-md-6 col-sm-12 col-12">
+		<h1><b>Feedbacks</b></h1>
+	</div>
 </div>
+<div id="addDiv"></div>
+<table class="table">
+	<thead>
+		<tr>
+			<th>
+				User Name
+			</th>
+			<th>
+				Date
+			</th>
+			<th>
+				isResponded
+			</th>
+			<th></th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach (var item in Model)
+		{
+			<tr>
+				<td>
+					@item.User.FirstName @item.User.LastName
+				</td>
+				<td>
+					@Html.DisplayFor(modelItem => item.AddedOn)
+				</td>
+				<td>
+					@if(item.Response!=null)
+					{
+						<span>Yes</span>
+					}
+					else
+					{
+						<span>No</span>
+					}
+				</td>
+				<td>
+					<a data-toggle="modal" class="btn btn-info" data-target="#FeedbackInfoModal" onclick="FeedbackInfo(@item.Id)">Info</a>
+				</td>
+			</tr>
+		}
+	</tbody>
+</table>
 
-
-
-@section Scripts {
-	@{
-		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+	function FeedbackInfo(id) {
+		$.ajax({
+			type: "Get",
+			url: "/Feedback/Info",
+			data: { Id: id },
+			success: function (result) {
+				$("#addDiv").html(result);
+				$("#FeedbackInfoModal").modal('show');
+			}
+		})
 	}
-}
+</script>

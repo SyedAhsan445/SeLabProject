@@ -1,5 +1,6 @@
 ﻿using System.Net.Mail;
 using System.Net;
+using ClothX.DbModels;
 
 namespace ClothX.Services
 {
@@ -55,6 +56,22 @@ namespace ClothX.Services
 			mail.From = new MailAddress(emailAddress);
 			mail.To.Add(Email);
 			mail.Subject = "Registration on ClothX";
+			mail.IsBodyHtml = true;
+
+
+
+			string content = "";
+
+			mail.Body = content;
+			//smtpClient.Send(mail);
+		}
+
+		public async Task SendEmailOnFeedbackResponse(Review review)
+		{
+			MailMessage mail = new MailMessage();
+			mail.From = new MailAddress(emailAddress);
+			mail.To.Add(review.User.User.Email);
+			mail.Subject = "Feedback Reviewed";
 			mail.IsBodyHtml = true;
 
 
