@@ -66,6 +66,38 @@ namespace ClothX.Services
 			//smtpClient.Send(mail);
 		}
 
+		public async Task ResendEmailConfirmation(string Email, string Name, string code)
+		{
+			MailMessage mail = new MailMessage();
+			mail.From = new MailAddress(emailAddress);
+			mail.To.Add(Email);
+			mail.Subject = "Registration on ClothX";
+			mail.IsBodyHtml = true;
+
+
+
+			string content = "";
+
+			mail.Body = content;
+			//smtpClient.Send(mail);
+		}
+
+		public async Task SendPasswordResetToken(string Email, string Name, string code)
+		{
+			MailMessage mail = new MailMessage();
+			mail.From = new MailAddress(emailAddress);
+			mail.To.Add(Email);
+			mail.Subject = "Registration on ClothX";
+			mail.IsBodyHtml = true;
+
+
+
+			string content = "";
+
+			mail.Body = content;
+			//smtpClient.Send(mail);
+		}
+
 		public async Task SendEmailOnFeedbackResponse(Review review)
 		{
 			MailMessage mail = new MailMessage();

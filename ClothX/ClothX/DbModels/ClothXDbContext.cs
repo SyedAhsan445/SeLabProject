@@ -189,6 +189,8 @@ namespace ClothX.DbModels
 
 				entity.Property(e => e.AddedOn).HasColumnType("datetime");
 
+				entity.Property(e => e.Deadline).HasColumnType("datetime");
+
 				entity.Property(e => e.IsActive)
 					.HasColumnName("isActive")
 					.HasDefaultValueSql("((1))");

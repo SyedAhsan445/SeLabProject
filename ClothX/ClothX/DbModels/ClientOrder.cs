@@ -25,6 +25,7 @@ namespace ClothX.DbModels
         public string? Measurements { get; set; }
         public int OrderType { get; set; }
         public int? Price { get; set; }
+        public DateTime Deadline { get; set; }
 
         public virtual UserProfile Client { get; set; } = null!;
         public virtual ProductCategory OrderTypeNavigation { get; set; } = null!;
