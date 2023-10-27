@@ -40,7 +40,8 @@ namespace ClothX.Controllers
 
 		public IActionResult Feedback(string url)
 		{
-			ViewBag.CurrentUrl = url;
+			//ViewBag.CurrentUrl = url;
+			ViewData["CurrentUrl"] = url;
 			return PartialView("FeedbackPartialView");
 		}
 

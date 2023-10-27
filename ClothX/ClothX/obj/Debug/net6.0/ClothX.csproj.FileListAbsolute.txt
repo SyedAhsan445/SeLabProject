@@ -268,3 +268,5 @@ D:\Semester5\Software Enginnering\Lab\Developer\SeLabProject\ClothX\ClothX\obj\D
 D:\Semester5\Software Enginnering\Lab\Developer\SeLabProject\ClothX\ClothX\obj\Debug\net6.0\ClothX.genruntimeconfig.cache
 D:\Semester5\Software Enginnering\Lab\Developer\SeLabProject\ClothX\ClothX\obj\Debug\net6.0\ref\ClothX.dll
 D:\Semester5\Software Enginnering\Lab\Developer\SeLabProject\ClothX\ClothX\bin\Debug\net6.0\nlog.config
+D:\Semester5\Software Enginnering\Lab\Developer\SeLabProject\ClothX\ClothX\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+D:\Semester5\Software Enginnering\Lab\Developer\SeLabProject\ClothX\ClothX\bin\Debug\net6.0\itextsharp.dll
