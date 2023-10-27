@@ -138,7 +138,7 @@ namespace ClothX.Controllers
 		}
 
 
-		private Document CoursesTable(Document document, string titleText, List<ClientOrder> orders)
+		private Document OrdersTable(Document document, string titleText, List<ClientOrder> orders)
 		{
 			try
 			{
@@ -218,7 +218,7 @@ namespace ClothX.Controllers
 				orders = orders.Where(x => x.AddedOn.Month == DateTime.Now.Month).ToList();
 			}
 			//var courses = db.Courses.ToList();
-			document = CoursesTable(document, Month == true ? "Monthly Orders Report" : "Yearly Orders Report", orders);
+			document = OrdersTable(document, Month == true ? "Monthly Orders Report" : "Yearly Orders Report", orders);
 
 			// Report Body Function Calling Ends
 
