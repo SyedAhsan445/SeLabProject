@@ -26,6 +26,8 @@ namespace ClothX.ViewModels
 
 		public IFormFileCollection? ideaImages { get; set; }
 
+		public int Price { get; set; }
+
 		public virtual UserProfile Client { get; set; } = null!;
 		public virtual ICollection<ClientOrderIdeaImage> ClientOrderIdeaImages { get; set; }
 		public virtual ICollection<OrderFeature> OrderFeatures { get; set; }

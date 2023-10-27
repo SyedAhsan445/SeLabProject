@@ -281,6 +281,258 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\css\\lg-autoplay.css",
+      "PackagePath": "staticwebassets\\lightgallery\\css\\lg-autoplay.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\css\\lg-comments.css",
+      "PackagePath": "staticwebassets\\lightgallery\\css\\lg-comments.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\css\\lg-fullscreen.css",
+      "PackagePath": "staticwebassets\\lightgallery\\css\\lg-fullscreen.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\css\\lg-medium-zoom.css",
+      "PackagePath": "staticwebassets\\lightgallery\\css\\lg-medium-zoom.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\css\\lg-pager.css",
+      "PackagePath": "staticwebassets\\lightgallery\\css\\lg-pager.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\css\\lg-relative-caption.css",
+      "PackagePath": "staticwebassets\\lightgallery\\css\\lg-relative-caption.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\css\\lg-rotate.css",
+      "PackagePath": "staticwebassets\\lightgallery\\css\\lg-rotate.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\css\\lg-share.css",
+      "PackagePath": "staticwebassets\\lightgallery\\css\\lg-share.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\css\\lg-thumbnail.css",
+      "PackagePath": "staticwebassets\\lightgallery\\css\\lg-thumbnail.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\css\\lg-transitions.css",
+      "PackagePath": "staticwebassets\\lightgallery\\css\\lg-transitions.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\css\\lg-video.css",
+      "PackagePath": "staticwebassets\\lightgallery\\css\\lg-video.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\css\\lg-zoom.css",
+      "PackagePath": "staticwebassets\\lightgallery\\css\\lg-zoom.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\css\\lightgallery-bundle.css",
+      "PackagePath": "staticwebassets\\lightgallery\\css\\lightgallery-bundle.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\css\\lightgallery-bundle.min.css",
+      "PackagePath": "staticwebassets\\lightgallery\\css\\lightgallery-bundle.min.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\css\\lightgallery-core.css",
+      "PackagePath": "staticwebassets\\lightgallery\\css\\lightgallery-core.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\css\\lightgallery.css",
+      "PackagePath": "staticwebassets\\lightgallery\\css\\lightgallery.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\fonts\\lg.svg",
+      "PackagePath": "staticwebassets\\lightgallery\\fonts\\lg.svg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\fonts\\lg.ttf",
+      "PackagePath": "staticwebassets\\lightgallery\\fonts\\lg.ttf"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\fonts\\lg.woff",
+      "PackagePath": "staticwebassets\\lightgallery\\fonts\\lg.woff"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\fonts\\lg.woff2",
+      "PackagePath": "staticwebassets\\lightgallery\\fonts\\lg.woff2"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\images\\loading.gif",
+      "PackagePath": "staticwebassets\\lightgallery\\images\\loading.gif"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\lightgallery.es5.js",
+      "PackagePath": "staticwebassets\\lightgallery\\lightgallery.es5.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\lightgallery.min.js",
+      "PackagePath": "staticwebassets\\lightgallery\\lightgallery.min.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\lightgallery.umd.js",
+      "PackagePath": "staticwebassets\\lightgallery\\lightgallery.umd.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\autoplay\\lg-autoplay.es5.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\autoplay\\lg-autoplay.es5.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\autoplay\\lg-autoplay.min.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\autoplay\\lg-autoplay.min.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\autoplay\\lg-autoplay.umd.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\autoplay\\lg-autoplay.umd.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\comment\\lg-comment.es5.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\comment\\lg-comment.es5.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\comment\\lg-comment.min.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\comment\\lg-comment.min.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\comment\\lg-comment.umd.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\comment\\lg-comment.umd.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\fullscreen\\lg-fullscreen.es5.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\fullscreen\\lg-fullscreen.es5.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\fullscreen\\lg-fullscreen.min.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\fullscreen\\lg-fullscreen.min.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\fullscreen\\lg-fullscreen.umd.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\fullscreen\\lg-fullscreen.umd.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\hash\\lg-hash.es5.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\hash\\lg-hash.es5.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\hash\\lg-hash.min.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\hash\\lg-hash.min.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\hash\\lg-hash.umd.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\hash\\lg-hash.umd.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\mediumZoom\\lg-medium-zoom.es5.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\mediumZoom\\lg-medium-zoom.es5.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\mediumZoom\\lg-medium-zoom.min.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\mediumZoom\\lg-medium-zoom.min.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\mediumZoom\\lg-medium-zoom.umd.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\mediumZoom\\lg-medium-zoom.umd.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\pager\\lg-pager.es5.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\pager\\lg-pager.es5.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\pager\\lg-pager.min.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\pager\\lg-pager.min.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\pager\\lg-pager.umd.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\pager\\lg-pager.umd.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\relativeCaption\\lg-relative-caption.es5.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\relativeCaption\\lg-relative-caption.es5.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\relativeCaption\\lg-relative-caption.min.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\relativeCaption\\lg-relative-caption.min.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\relativeCaption\\lg-relative-caption.umd.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\relativeCaption\\lg-relative-caption.umd.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\rotate\\lg-rotate.es5.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\rotate\\lg-rotate.es5.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\rotate\\lg-rotate.min.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\rotate\\lg-rotate.min.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\rotate\\lg-rotate.umd.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\rotate\\lg-rotate.umd.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\share\\lg-share.es5.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\share\\lg-share.es5.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\share\\lg-share.min.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\share\\lg-share.min.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\share\\lg-share.umd.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\share\\lg-share.umd.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\thumbnail\\lg-thumbnail.es5.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\thumbnail\\lg-thumbnail.es5.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\thumbnail\\lg-thumbnail.min.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\thumbnail\\lg-thumbnail.min.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\thumbnail\\lg-thumbnail.umd.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\thumbnail\\lg-thumbnail.umd.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\video\\lg-video.es5.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\video\\lg-video.es5.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\video\\lg-video.min.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\video\\lg-video.min.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\video\\lg-video.umd.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\video\\lg-video.umd.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\vimeoThumbnail\\lg-vimeo-thumbnail.es5.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\vimeoThumbnail\\lg-vimeo-thumbnail.es5.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\vimeoThumbnail\\lg-vimeo-thumbnail.min.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\vimeoThumbnail\\lg-vimeo-thumbnail.min.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\vimeoThumbnail\\lg-vimeo-thumbnail.umd.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\vimeoThumbnail\\lg-vimeo-thumbnail.umd.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\zoom\\lg-zoom.es5.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\zoom\\lg-zoom.es5.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\zoom\\lg-zoom.min.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\zoom\\lg-zoom.min.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\lightgallery\\plugins\\zoom\\lg-zoom.umd.js",
+      "PackagePath": "staticwebassets\\lightgallery\\plugins\\zoom\\lg-zoom.umd.js"
+    },
+    {
       "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ClothX.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
