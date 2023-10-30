@@ -12,6 +12,7 @@ namespace ClothX.DbModels
         public string AddedBy { get; set; } = null!;
         public string? Response { get; set; }
         public DateTime? ResponseAddedOn { get; set; }
+        public int? Rating { get; set; }
 
         public virtual UserProfile User { get; set; } = null!;
     }

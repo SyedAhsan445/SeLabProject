@@ -18,6 +18,9 @@ namespace ClothX.Controllers
             model.UserId = userId;
             model.AddedOn = DateTime.Now;
             model.AddedBy = User.Identity.Name;
+            _ = int.TryParse(form["rate"], out int r);
+
+            model.Rating = r;
             await db.Reviews.AddAsync(model);
             await db.SaveChangesAsync();
             return Redirect(form["CurrentUrl"]);

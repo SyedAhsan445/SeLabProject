@@ -20,6 +20,9 @@
 				User Name
 			</th>
 			<th>
+				Rating
+			</th>
+			<th>
 				Date
 			</th>
 			<th>
@@ -34,6 +37,9 @@
 			<tr>
 				<td>
 					@item.User.FirstName @item.User.LastName
+				</td>
+				<td>
+					@item.Rating
 				</td>
 				<td>
 					@Html.DisplayFor(modelItem => item.AddedOn)
