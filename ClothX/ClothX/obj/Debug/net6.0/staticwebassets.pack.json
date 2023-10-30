@@ -2645,6 +2645,170 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\css\\style.css",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\css\\style.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\css\\tiny-slider.css",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\css\\tiny-slider.css"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\bag.svg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\bag.svg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\bowl-2.png",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\bowl-2.png"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\bowl-3.png",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\bowl-3.png"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\cart.svg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\cart.svg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\couch.png",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\couch.png"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\cross.svg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\cross.svg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\dots-green.svg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\dots-green.svg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\dots-light.svg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\dots-light.svg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\dots-yellow.svg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\dots-yellow.svg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\envelope-outline.svg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\envelope-outline.svg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\footer-img.jpeg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\footer-img.jpeg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\hero-image.jpg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\hero-image.jpg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\img-grid-1.jpg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\img-grid-1.jpg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\img-grid-2.jpg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\img-grid-2.jpg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\img-grid-3.jpg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\img-grid-3.jpg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\person-1.jpg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\person-1.jpg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\person-1.png",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\person-1.png"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\person_1.jpg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\person_1.jpg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\person_2.jpg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\person_2.jpg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\person_3.jpg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\person_3.jpg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\person_4.jpg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\person_4.jpg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\post-1.jpg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\post-1.jpg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\post-2.jpg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\post-2.jpg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\post-3.jpg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\post-3.jpg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\product-1.png",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\product-1.png"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\product-2.png",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\product-2.png"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\product-3.png",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\product-3.png"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\return.svg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\return.svg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\sofa.png",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\sofa.png"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\support.svg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\support.svg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\truck.svg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\truck.svg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\user.svg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\user.svg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\images\\why-choose-us-img.jpg",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\images\\why-choose-us-img.jpg"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\js\\custom.js",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\js\\custom.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\js\\tiny-slider.js",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\js\\tiny-slider.js"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\prepros-6.config",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\prepros-6.config"
+    },
+    {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\ecommerceAssets\\scss\\style.scss",
+      "PackagePath": "staticwebassets\\ecommerceAssets\\scss\\style.scss"
+    },
+    {
       "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

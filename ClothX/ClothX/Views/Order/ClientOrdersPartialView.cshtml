@@ -5,6 +5,8 @@
 }
 
 
+
+
 <div class="table-responsive">
 	<table class="table data-table">
 		<thead>
@@ -33,19 +35,19 @@
 					<td>
 						@if (item.IsDelivered == true)
 						{
-							<span>Order Completed</span>
+							<span class="chip bg-success">Order Completed</span>
 						}
 						else if (item.IsConfirmed == true)
 						{
-							<span>In Progress</span>
+							<span class="chip bg-info">In Progress</span>
 						}
 						else if (item.IsPaid == true)
 						{
-							<span>Paid</span>
+							<span class="chip bg-secondary">Paid</span>
 						}
 						else
 						{
-							<span>Not Paid</span>
+							<span class="chip bg-danger">Not Paid</span>
 						}
 					</td>
 					<td>
@@ -58,9 +60,9 @@
 						@item.Deadline
 					</td>
 					<td>
-						
-						<a asp-action="Preview" asp-route-id="@item.Id">Details</a> |
-						@if(isMyOrders==true)
+
+						<a asp-action="Preview" asp-route-id="@item.Id" class="btn btn-info">Details</a>
+						@if (isMyOrders == true)
 						{
 							@if (item.IsConfirmed != true)
 							{
@@ -77,28 +79,29 @@
 						}
 						else
 						{
-							@if(item.IsPaid==false)
+							@if (item.IsPaid == false)
 							{
 								<a asp-action="ChangeOrderStatus" class="btn btn-success" asp-route-Order="@item.Id" asp-route-Status="1">Confirm Payment</a>
 								<a asp-action="ChangeOrderStatus" class="btn btn-danger" asp-route-Order="@item.Id" asp-route-Status="0">Cancel Order</a>
 							}
-							else if(item.IsConfirmed==false)
+							else if (item.IsConfirmed == false)
 							{
 								<a asp-action="ChangeOrderStatus" class="btn btn-success" asp-route-Order="@item.Id" asp-route-Status="2">Confirm Order</a>
 								<a asp-action="ChangeOrderStatus" class="btn btn-danger" asp-route-Order="@item.Id" asp-route-Status="-1">Return Payment</a>
 							}
-							else if(item.IsDelivered==false)
+							else if (item.IsDelivered == false)
 							{
 								<a asp-action="ChangeOrderStatus" class="btn btn-success" asp-route-Order="@item.Id" asp-route-Status="3">Order Completed</a>
 								<a asp-action="ChangeOrderStatus" class="btn btn-danger" asp-route-Order="@item.Id" asp-route-Status="-1">Return Payment</a>
 							}
 							else
 							{
-								<span>Order Delivered</span>
+								<span class="chip bg-success">Order Delivered</span>
 							}
 						}
 
-						
+
+
 					</td>
 				</tr>
 			}

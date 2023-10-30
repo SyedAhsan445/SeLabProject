@@ -24,7 +24,7 @@ namespace ClothX.Utility
         public List<SelectListItem> TailorProjectCategoryDropdown(bool withPrice = false)
         {
             ClothXDbContext db = new ClothXDbContext();
-            var lst = db.ProductCategories.Select(a => new SelectListItem()
+            var lst = db.ProductCategories.Where(x=>x.IsActive==true).Select(a => new SelectListItem()
             {
                 Text = a.Name + (withPrice == true ? " - " + a.Price + "Rs" : ""),
                 Value = a.Id + ""

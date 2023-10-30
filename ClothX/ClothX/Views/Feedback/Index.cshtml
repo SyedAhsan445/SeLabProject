@@ -10,7 +10,10 @@
 	</div>
 </div>
 <div id="addDiv"></div>
-<table class="table">
+
+<div class="table-responsive">
+
+<table class="table data-table">
 	<thead>
 		<tr>
 			<th>
@@ -38,11 +41,11 @@
 				<td>
 					@if(item.Response!=null)
 					{
-						<span>Yes</span>
+						<span class="chip bg-success">Yes</span>
 					}
 					else
 					{
-						<span>No</span>
+						<span class="chip bg-secondary">No</span>
 					}
 				</td>
 				<td>
@@ -52,6 +55,7 @@
 		}
 	</tbody>
 </table>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>

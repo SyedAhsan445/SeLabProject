@@ -22,7 +22,7 @@ namespace ClothX.Controllers
 			try
 			{
 				tailorProjects = await TailorProjectsUtility.Instance.getTailorProjects();
-				tailorProjects = tailorProjects.Where(x => x.IsActive == true).ToList();
+				tailorProjects = tailorProjects.Where(x => x.IsActive == true).ToList().OrderByDescending(obj => obj.AddedOn).Take(3).ToList();
 			}
 			catch (Exception ex)
 			{

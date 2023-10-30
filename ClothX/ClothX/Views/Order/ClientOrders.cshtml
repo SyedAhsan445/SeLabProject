@@ -3,7 +3,7 @@
 @{
 	ViewData["Title"] = "Client Orders";
 }
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css" />
+
 
 <h1>Client Orders</h1>
 
@@ -18,13 +18,3 @@
 
 <partial name="ClientOrdersPartialView" model="Model"/>
 
-<script defer src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
-<script defer src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js"></script>
-
-<script>
-	$(document).ready(function () {
-		$('.data-table').DataTable({
-			responsive: true,
-		});
-	});
-</script>

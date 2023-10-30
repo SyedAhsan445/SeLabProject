@@ -136,24 +136,28 @@
                         <h4>@g.Name</h4>
                         @foreach (var i in g.Features)
                         {
-                            @if (ViewBag.OrderId==0)
+                            if(i.IsActive==true)
                             {
-                                <div class="form-check">
-                                    <input class="form-check-input" value="@i.Id" type="radio" name="Feature-@g.Id" id="radio-@i.Id" @Html.Raw(i==g.Features.FirstOrDefault()?"checked":"")>
-                                    <label class="form-check-label" for="radio-@i.Id">
-                                        @i.Name - @i.Price Rs
-                                    </label>
-                                </div>
+                                @if (ViewBag.OrderId == 0)
+                                {
+                                    <div class="form-check">
+                                        <input class="form-check-input" value="@i.Id" type="radio" name="Feature-@g.Id" id="radio-@i.Id" @Html.Raw(i==g.Features.FirstOrDefault()?"checked":"")>
+                                        <label class="form-check-label" for="radio-@i.Id">
+                                            @i.Name - @i.Price Rs
+                                        </label>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="form-check">
+                                        <input class="form-check-input" value="@i.Id" type="radio" name="Feature-@g.Id" id="radio-@i.Id" @Html.Raw(orderFeatures.Any(x=>x.FeatureId==i.Id)?"checked":"")>
+                                        <label class="form-check-label" for="radio-@i.Id">
+                                            @i.Name - @i.Price Rs
+                                        </label>
+                                    </div>
+                                }
                             }
-                            else
-                            {
-                                <div class="form-check">
-                                    <input class="form-check-input" value="@i.Id" type="radio" name="Feature-@g.Id" id="radio-@i.Id" @Html.Raw(orderFeatures.Any(x=>x.FeatureId==i.Id)?"checked":"")>
-                                    <label class="form-check-label" for="radio-@i.Id">
-                                        @i.Name - @i.Price Rs
-                                    </label>
-                                </div>
-                            }
+                            
 
                     }
                     </div>

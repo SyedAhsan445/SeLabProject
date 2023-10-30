@@ -3,23 +3,15 @@
 @{
 	ViewData["Title"] = "MyOrders";
 }
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css" />
 
-<h1>My Orders</h1>
-
-<p>
-	<a asp-action="PlaceOrder">Place an Order</a>
-</p>
+<div class="row">
+	<div class="col-md-6 col-sm-12 col-12">
+		<h1><b>My Orders</b></h1>
+	</div>
+	<div class="col-md-6 col-sm-12 col-12" style="display: flex; justify-content: flex-end;align-items:center ">
+		<a class="btn btn-primary" asp-action="PlaceOrder">Place Order</a>
+	</div>
+</div>
 
 <partial name="ClientOrdersPartialView" model="Model"/>
 
-<script defer src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
-<script defer src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js"></script>
-
-<script>
-	$(document).ready(function () {
-		$('.data-table').DataTable({
-			responsive: true,
-		});
-	});
-</script>

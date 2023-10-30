@@ -14,58 +14,70 @@
 	<a asp-action="AddEdit" class="btn btn-primary">Create New</a>
 </div>
 
-
-<table class="table data-table">
-	<thead>
-		<tr>
-			<th>
-				@Html.DisplayNameFor(model => model.Title)
-			</th>
-			<th>
-				@Html.DisplayNameFor(model => model.AddedOn)
-			</th>
-			<th>
-				@Html.DisplayNameFor(model => model.IsActive)
-			</th>
-			<th>
-				@Html.DisplayNameFor(model => model.ProductCategory)
-			</th>
-			<th></th>
-		</tr>
-	</thead>
-	<tbody>
-		@foreach (var item in Model)
-		{
+<div class="table-responsive">
+	<table class="table data-table">
+		<thead>
 			<tr>
-				<td>
-					@Html.DisplayFor(modelItem => item.Title)
-				</td>
-				<td>
-					@Html.DisplayFor(modelItem => item.AddedOn)
-				</td>
-				<td>
-					@Html.DisplayFor(modelItem => item.IsActive)
-				</td>
-				<td>
-					@Html.DisplayFor(modelItem => item.ProductCategory.Name)
-				</td>
-				<td>
-					<a asp-action="AddEdit" class="btn btn-secondary" asp-route-Project="@item.Id">Edit</a> |
-					<a asp-action="Details" class="btn btn-success" asp-route-Project="@item.Id">Details</a> |
-					@if(item.IsActive==true)
-					{
-						<a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.Id">Remove</a>
-					}
-					else
-					{
-						<a asp-action="Delete" class="btn btn-warning" asp-route-id="@item.Id">Make Active</a>
-					}
-
-				</td>
+				<th>
+					@Html.DisplayNameFor(model => model.Title)
+				</th>
+				<th>
+					@Html.DisplayNameFor(model => model.AddedOn)
+				</th>
+				<th>
+					Status
+				</th>
+				<th>
+					Product Type
+				</th>
+				<th></th>
 			</tr>
-		}
-	</tbody>
-</table>
+		</thead>
+		<tbody>
+			@foreach (var item in Model)
+			{
+				<tr>
+					<td>
+						@Html.DisplayFor(modelItem => item.Title)
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.AddedOn)
+					</td>
+					<td>
+						@if (item.IsActive == true)
+						{
+							<span class="chip bg-success">Active</span>
+						}
+						else
+						{
+							<span class="chip bg-danger">In-Active</span>
+						}
+					</td>
+					<td>
+						@Html.DisplayFor(modelItem => item.ProductCategory.Name)
+					</td>
+					<td>
+						<div class="btn-group">
+
+							<a asp-action="AddEdit" class="btn btn-secondary" asp-route-Project="@item.Id">Edit</a>
+							<a asp-action="Details" asp-route-Project="@item.Id" class="btn btn-info">Details</a>
+							@if (item.IsActive == true)
+							{
+								<a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.Id">Remove</a>
+							}
+							else
+							{
+								<a asp-action="Delete" class="btn btn-warning" asp-route-id="@item.Id">Make Active</a>
+							}
+						</div>
+
+					</td>
+				</tr>
+			}
+		</tbody>
+	</table>
+
+</div>
 
 
 @section Scripts{
