@@ -42,7 +42,6 @@ namespace ClothX.Data
 				userProfile.UserId = userId;
 				userProfile.FirstName = "Umair";
 				userProfile.LastName = "Noor";
-				userProfile.Gender = db.Lookups.Where(x => x.Value == "Male").FirstOrDefault().Id;
 				userProfile.AddedOn = DateTime.Today.Date;
 				userProfile.IsApproved = true;
 				userProfile.IsActive = true;

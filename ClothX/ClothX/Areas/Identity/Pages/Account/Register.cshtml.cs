@@ -143,7 +143,6 @@ namespace ClothX.Areas.Identity.Pages.Account
 					userProfile.FirstName = Input.FirstName;
 					userProfile.LastName = Input.LastName;
 					userProfile.UserId = userId;
-					userProfile.Gender = db.Lookups.Where(x => x.Value == "Male").FirstOrDefault().Id;
 					userProfile.AddedOn = DateTime.Today.Date;
 					userProfile.IsApproved = false;
 					userProfile.IsActive = true;
