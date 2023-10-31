@@ -25,7 +25,11 @@ namespace ClothX.Utility
 
 		private TailorProjectsUtility() { }
 
-
+		public async Task<List<TailorProject>> getActiveTailorProjects()
+		{
+			var projects = await db.TailorProjects.Where(x => x.IsActive == true).ToListAsync();
+			return projects;
+		}
 		public async Task<List<TailorProject>> getTailorProjects()
 		{
 			var projects = await db.TailorProjects.ToListAsync();

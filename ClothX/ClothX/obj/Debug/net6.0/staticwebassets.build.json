@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qxYC3ZnyopgKn0/3kc8sAFNa6Q+XOr29DhEVKXdK3gU=",
+  "Hash": "KG3L6+UJpdK3zGuTdIwp1rACDqL3EEoMkHC9Z9zLtTI=",
   "Source": "ClothX",
   "BasePath": "_content/ClothX",
   "Mode": "Default",
@@ -13020,6 +13020,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\ProjectImages\\8da2eefa-b994-429e-93d7-e7754b3c3e95.png"
+    },
+    {
+      "Identity": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\Images\\UserImages\\55f49959-619a-488d-932d-4e7b2732eece.jpeg",
+      "SourceId": "ClothX",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\",
+      "BasePath": "_content/ClothX",
+      "RelativePath": "Images/UserImages/55f49959-619a-488d-932d-4e7b2732eece.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\UserImages\\55f49959-619a-488d-932d-4e7b2732eece.jpeg"
     },
     {
       "Identity": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\js\\site.js",

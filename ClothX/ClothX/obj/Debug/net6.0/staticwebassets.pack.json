@@ -2633,6 +2633,10 @@
       "PackagePath": "staticwebassets\\Images\\ProjectImages\\8da2eefa-b994-429e-93d7-e7754b3c3e95.png"
     },
     {
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\Images\\UserImages\\55f49959-619a-488d-932d-4e7b2732eece.jpeg",
+      "PackagePath": "staticwebassets\\Images\\UserImages\\55f49959-619a-488d-932d-4e7b2732eece.jpeg"
+    },
+    {
       "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\Images\\logo-transparent.png",
       "PackagePath": "staticwebassets\\Images\\logo-transparent.png"
     },

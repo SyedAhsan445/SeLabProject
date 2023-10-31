@@ -1,96 +1,207 @@
-﻿@model IEnumerable<ClothX.DbModels.TailorProject>
+﻿@using ClothX.Utility;
+@model IEnumerable<ClothX.DbModels.TailorProject>
 
-@using ClothX.Utility;
 @{
-	Layout = UserUtility.Instance.GetLayout(User);
-	ViewData["Title"] = "Index";
+	ViewData["Title"] = "Projects";
+	ViewBag.IsHomePage = true;
 }
+<style>
+	.pagination {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background: #fff;
+		color: #383838;
+		padding: 10px 14px;
+		border-radius: 6px;
+	}
 
-<link rel="stylesheet" href="https://cdn.datatables.net/1.13.5/css/dataTables.bootstrap5.min.css" />
+		.pagination ul {
+			margin: 20px 30px;
+		}
 
-<h1 class="text-center">Index</h1>
+			.pagination ul li {
+				display: inline-block;
+				margin: 0px 10px;
+				/*background: #ccc;*/
+				width: 45px;
+				height: 45px;
+				border-radius: 50%;
+				line-height: 45px;
+				text-align: center;
+				cursor: pointer;
+				font-size: 22px;
+				font-weight: 500;
 
-<div class="d-flex justify-content-end">
-	<a asp-action="AddEdit" class="btn btn-primary">Create New</a>
+				background-position: 0 -45px;
+				transition: background-position 0.5s;
+			}
+
+				.pagination ul li:hover, .pagination .btn1:hover, .pagination .btn2:hover {
+					color: #fff;
+					background-image: linear-gradient(#3b5d50,#3b5d50);
+					background-repeat: no-repeat;
+					background-position: 0 0;
+				}
+				.pagination ul li.active {
+					color: #fff;
+					background-image: linear-gradient(#3b5d50,#3b5d50);
+					background-repeat: no-repeat;
+					background-position: 0 0;
+
+				}
+
+
+		.pagination .btn1, .pagination .btn2 {
+			display: inline-flex;
+			align-items: center;
+			font-size: 22px;
+			font-weight: 500;
+			text-align: center;
+			border-radius: 6px;
+			color: #383838;
+			background: transparent;
+			outline: none;
+			border: none;
+			cursor: pointer;
+			background-position: 0 -45px;
+			transition: background-position 0.5s;
+		}
+
+</style>
+
+<!-- Start Hero Section -->
+<div class="hero">
+	<div class="container">
+		<div class="row justify-content-between">
+			<div class="col-lg-5">
+				<div class="intro-excerpt">
+					<h1>Projects</h1>
+				</div>
+			</div>
+			<div class="col-lg-7">
+				@if (UserUtility.Instance.HasAuthority("TailorProjects.Manage", User))
+				{
+					<div class="d-flex justify-content-end">
+						<a class="btn btn-primary" asp-controller="Project" asp-action="Manage">Manage</a>
+					</div>
+				}
+			</div>
+		</div>
+	</div>
 </div>
+<!-- End Hero Section -->
 
-<div class="table-responsive">
-	<table class="table data-table">
-		<thead>
-			<tr>
-				<th>
-					@Html.DisplayNameFor(model => model.Title)
-				</th>
-				<th>
-					@Html.DisplayNameFor(model => model.AddedOn)
-				</th>
-				<th>
-					Status
-				</th>
-				<th>
-					Product Type
-				</th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
+
+
+<div class="untree_co-section product-section before-footer-section">
+	<div class="container">
+		<div class="row list">
 			@foreach (var item in Model)
 			{
-				<tr>
-					<td>
-						@Html.DisplayFor(modelItem => item.Title)
-					</td>
-					<td>
-						@Html.DisplayFor(modelItem => item.AddedOn)
-					</td>
-					<td>
-						@if (item.IsActive == true)
-						{
-							<span class="chip bg-success">Active</span>
-						}
-						else
-						{
-							<span class="chip bg-danger">In-Active</span>
-						}
-					</td>
-					<td>
-						@Html.DisplayFor(modelItem => item.ProductCategory.Name)
-					</td>
-					<td>
-						<div class="btn-group">
-
-							<a asp-action="AddEdit" class="btn btn-secondary" asp-route-Project="@item.Id">Edit</a>
-							<a asp-action="Details" asp-route-Project="@item.Id" class="btn btn-info">Details</a>
-							@if (item.IsActive == true)
-							{
-								<a asp-action="Delete" class="btn btn-danger" asp-route-id="@item.Id">Remove</a>
-							}
-							else
-							{
-								<a asp-action="Delete" class="btn btn-warning" asp-route-id="@item.Id">Make Active</a>
-							}
-						</div>
-
-					</td>
-				</tr>
+				<div class="col-12 col-md-4 col-lg-3 mb-5 mb-md-0 item">
+					<a class="product-item" asp-action="Details" asp-controller="Project" asp-route-Project="@item.Id">
+						<img src="@item.ImagePath" class="img-fluid product-thumbnail" />
+						<h3 class="product-title">@item.Title</h3>
+						<strong class="product-price">@item.ProductCategory.Name</strong>
+					</a>
+				</div>
 			}
-		</tbody>
-	</table>
+		</div>
+	</div>
+</div>
 
+<div id="pagination" class="pagination m-5">
 </div>
 
 
-@section Scripts{
-	<partial name="_ValidationScriptsPartial" />
+<script type="text/javascript">
+	let thisPage = 1;
+	let limit = 10;
+	let list = document.querySelectorAll('.list .item');
 
-	<script defer src="https://cdn.datatables.net/1.13.5/js/jquery.dataTables.min.js"></script>
-	<script defer src="https://cdn.datatables.net/1.13.5/js/dataTables.bootstrap5.min.js"></script>
+	function loadItem() {
+		let beginGet = limit * (thisPage - 1);
+		let endGet = limit * thisPage - 1;
+		list.forEach((item, key) => {
+			if (key >= beginGet && key <= endGet) {
+				item.style.display = 'block';
+			} else {
+				item.style.display = 'none';
+			}
+		})
+		listPage();
+	}
 
-	<script>
-		$(document).ready(function () {
-			$('.data-table').DataTable({
-				responsive: true,
-			});
-		});
-	</script>
-}
+	function listPage() {
+		let count = Math.ceil(list.length / limit);
+		document.querySelector('.listPage').innerHTML = '';
+
+		if (thisPage != 1) {
+			let prev = document.createElement('li');
+			prev.innerText = 'PREV';
+			prev.classList.add('listNumber');
+			prev.setAttribute('onclick', "changePage(" + (thisPage - 1) + ")");
+			document.querySelector('.listPage').appendChild(prev);
+		}
+
+		for (i = 1; i <= count; i++) {
+			let newPage = document.createElement('li');
+			newPage.innerText = i;
+			if (i == thisPage) {
+				newPage.classList.add('active');
+			}
+			newPage.classList.add('listNumber');
+			newPage.setAttribute('onclick', "changePage(" + i + ")");
+			document.querySelector('.listPage').appendChild(newPage);
+		}
+
+		if (thisPage != count) {
+			let next = document.createElement('li');
+			next.innerText = 'NEXT';
+			next.setAttribute('onclick', "changePage(" + (thisPage + 1) + ")");
+			next.classList.add('listNumber');
+			document.querySelector('.listPage').appendChild(next);
+		}
+	}
+	function changePage(i) {
+		thisPage = i;
+		loadItem();
+	}
+
+	function createPagination() {
+		var paginationDiv = document.getElementById("pagination");
+
+		paginationDiv.innerHTML = '';
+
+		var firstButton = document.createElement("button");
+		firstButton.className = "btn1";
+		firstButton.textContent = "First";
+		firstButton.onclick = function () {
+			changePage(1);
+		};
+
+		let count = Math.ceil(list.length / limit);
+
+		var lastButton = document.createElement("button");
+		lastButton.className = "btn2";
+		lastButton.textContent = "Last";
+		lastButton.onclick = function () {
+			changePage(count);
+		};
+
+		var ulElement = document.createElement("ul");
+		ulElement.classList.add('listPage');
+
+		paginationDiv.appendChild(firstButton);
+		paginationDiv.appendChild(ulElement);
+		paginationDiv.appendChild(lastButton);
+
+
+		
+	}
+
+	createPagination();
+
+	loadItem();
+</script>

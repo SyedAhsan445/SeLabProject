@@ -28,7 +28,7 @@
                     </p>
                     <p>
                         <a asp-controller="Order" asp-action="PlaceOrder" class="btn btn-warning me-2">Order Now</a>
-                        <a asp-controller="Order" asp-action="PlaceOrder" class="btn btn-white-outline">Explore</a>
+                        <a asp-controller="Project" asp-action="Index" class="btn btn-white-outline">Explore</a>
                     </p>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                 <p class="mb-4">
                     Explore our skilled tailors' craftsmanship through a gallery of past projects, witnessing the artistry that inspires your custom creation.
                 </p>
-                <p><a asp-controller="Order" asp-action="MyOrders" class="btn btn-info">Explore</a></p>
+                <p><a asp-controller="Project" asp-action="Index" class="btn btn-info">Explore</a></p>
             </div>
             <!-- End Column 1 -->
             @foreach (var item in tailorProjects)
@@ -60,7 +60,7 @@
                     <a class="product-item" asp-action="Details" asp-controller="Project" asp-route-Project="@item.Id">
                         <img src="@item.ImagePath" class="img-fluid product-thumbnail" />
                         <h3 class="product-title">@item.Title</h3>
-                        @*<strong class="product-price">$43.00</strong>*@
+                        <strong class="product-price">@item.ProductCategory.Name</strong>
 
                         @*<span class="icon-cross">
                             <img src="~/ecommerceAssets/images/cross.svg" class="img-fluid" />
