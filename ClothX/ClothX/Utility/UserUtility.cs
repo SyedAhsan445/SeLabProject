@@ -38,7 +38,14 @@ namespace ClothX.Utility
 
 		public bool HasAuthority(string permission, ClaimsPrincipal? User)
 		{
-			return true;
+			if (User != null)
+			{
+				if (User.IsInRole(RoleType.Tailor.ToString()))
+				{
+					return true;
+				}
+			}
+			return false;
 		}
 
 		public int getUserProfileId(string username)

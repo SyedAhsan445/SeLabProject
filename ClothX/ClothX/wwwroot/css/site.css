@@ -23,6 +23,18 @@ html {
 }
 
 body {
+    min-height: 100vh;
+    margin-bottom: 0px !important;
+}
+
+footer {
+    position: sticky;
+    top: 100%;
+    margin-top: 200px !important;
+    margin-bottom: 0px !important;
+}
+
+body {
     margin-bottom: 60px;
 }
 

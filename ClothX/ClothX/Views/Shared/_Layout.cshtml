@@ -1,5 +1,7 @@
-﻿@{
+﻿@using ClothX.Constants;
+@{
 	bool? isHome = ViewBag.IsHomePage;
+	bool? IsContainer = ViewBag.IsContainer;
 }
 
 
@@ -23,7 +25,6 @@
 	<meta name="keywords" content="bootstrap, bootstrap4" />
 
 	<!-- Bootstrap CSS -->
-	@*<link href="css/bootstrap.min.css" rel="stylesheet" />*@
 	<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 	<link rel="stylesheet" href="~/ClothX.styles.css" asp-append-version="true" />
@@ -33,19 +34,6 @@
 	<link href="~/ecommerceAssets/css/tiny-slider.css" rel="stylesheet" />
 	<link href="~/ecommerceAssets/css/style.css" rel="stylesheet" />
 	<title>@ViewData["Title"] - ClothX</title>
-	<style>
-		body {
-			min-height: 100vh;
-			margin-bottom: 0px !important;
-		}
-
-		footer {
-			position: sticky;
-			top: 100%;
-			margin-top: 200px !important;
-			margin-bottom: 0px !important;
-		}
-	</style>
 </head>
 
 <body>
@@ -70,31 +58,46 @@
 					<li id="Home-li" class="nav-item">
 						<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
 					</li>
-					<li id="Order-li" class="nav-item">
-						<a class="nav-link" asp-area="" asp-controller="Order" asp-action="MyOrders">My Orders</a>
-					</li>
-					<li id="Order-li" class="nav-item">
-						<a class="nav-link" asp-area="" asp-controller="Order" asp-action="ClientOrders">Client Orders</a>
-					</li>
-					<li id="ProductType-li" class="nav-item">
-						<a class="nav-link" asp-area="" asp-controller="ProductType" asp-action="Index">Product Types</a>
-					</li>
-					<li id="Feature-li" class="nav-item">
-						<a class="nav-link" asp-area="" asp-controller="Feature" asp-action="Index">Feature Groups</a>
-					</li>
-					<li id="User-li" class="nav-item">
-						<a class="nav-link" asp-area="" asp-controller="User" asp-action="Index">Users</a>
-					</li>
-					<li id="Feedback-li" class="nav-item">
-						<a class="nav-link" asp-area="" asp-controller="Feedback" asp-action="Index">View Feedbacks</a>
-					</li>
-					@if (isHome == true)
+					@if(User.IsInRole(RoleType.Tailor.ToString()))
 					{
-						<li class="nav-item">
-							<a data-toggle="modal" style="cursor: pointer;" class="nav-link" data-target="#FeedbackModal" onclick="addFeedback()">Feedback</a>
+						<li id="Order-li" class="nav-item">
+							<a class="nav-link" asp-area="" asp-controller="Order" asp-action="ClientOrders">Client Orders</a>
+						</li>
+						<li id="ProductType-li" class="nav-item">
+							<a class="nav-link" asp-area="" asp-controller="ProductType" asp-action="Index">Product Types</a>
+						</li>
+						<li id="Feature-li" class="nav-item">
+							<a class="nav-link" asp-area="" asp-controller="Feature" asp-action="Index">Feature Groups</a>
+						</li>
+						<li id="User-li" class="nav-item">
+							<a class="nav-link" asp-area="" asp-controller="User" asp-action="Index">Users</a>
+						</li>
+						<li id="Feedback-li" class="nav-item">
+							<a class="nav-link" asp-area="" asp-controller="Feedback" asp-action="Index">View Feedbacks</a>
 						</li>
 					}
-
+					else if (User.IsInRole(RoleType.User.ToString()))
+					{
+						<li id="Order-li" class="nav-item">
+							<a class="nav-link" asp-area="" asp-controller="Order" asp-action="MyOrders">My Orders</a>
+						</li>
+						<li id="Services-li" class="nav-item">
+							<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Services">Services</a>
+						</li>
+						@if (isHome == true)
+						{
+							<li class="nav-item">
+								<a data-toggle="modal" style="cursor: pointer;" class="nav-link" data-target="#FeedbackModal" onclick="addFeedback()">Feedback</a>
+							</li>
+						}
+					}
+					else
+					{
+						<li id="Services-li" class="nav-item">
+							<a class="nav-link" asp-area="" asp-controller="Home" asp-action="Services">Services</a>
+						</li>
+					}
+					
 				</ul>
 				<ul class="custom-navbar-cta navbar-nav mb-2 mb-md-0 ms-5">
 					<partial name="_LoginPartial" />
@@ -104,7 +107,7 @@
 	</nav>
 	<!-- End Header/Navigation -->
 	<!--Start Main Section-->
-	@if (isHome == true)
+	@if (IsContainer == true)
 	{
 		<div id="feedbackDiv"></div>
 		@RenderBody()
@@ -201,19 +204,11 @@
 							<!-- License information: https://untree.co/license/ -->
 						</p>
 					</div>
-
-					@*<div class="col-lg-6 text-center text-lg-end">
-					<ul class="list-unstyled d-inline-flex ms-auto">
-					<li class="me-4"><a href="#">Terms &amp; Conditions</a></li>
-					<li><a href="#">Privacy Policy</a></li>
-					</ul>
-					</div>*@
 				</div>
 			</div>
 		</div>
 	</footer>
 	<!-- End Footer Section -->
-	@*<script src="~/ecommerceAssets/js/bootstrap.bundle.min.js"></script>*@
 	<script src="~/ecommerceAssets/js/tiny-slider.js"></script>
 	<script src="~/ecommerceAssets/js/custom.js"></script>
 

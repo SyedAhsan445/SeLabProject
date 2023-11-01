@@ -188,8 +188,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/Home/Services.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxTZXJ2aWNlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/Order/ClientOrders.cshtml]
@@ -271,7 +271,3 @@ build_metadata.AdditionalFiles.CssScope =
 [D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-fu8zg0aoez
-
-[D:/Semester5/Software Enginnering/Lab/Developer/SeLabProject/ClothX/ClothX/Views/Shared/_LayoutOld.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXRPbGQuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = b-yc8lbtj7ep
