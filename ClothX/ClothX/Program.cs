@@ -2,6 +2,7 @@ using ClothX.CustomAttributes;
 using ClothX.Data;
 using ClothX.DbModels;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using NLog.Web;

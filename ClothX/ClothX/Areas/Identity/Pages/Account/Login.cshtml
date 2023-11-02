@@ -1,52 +1,44 @@
-﻿@page
+﻿@page "/Account/Login"
 @model LoginModel
 
 @{
-    ViewData["Title"] = "Log in";
+	ViewData["Title"] = "Log in";
+	ViewBag.TitleText = "Login to Your Account";
+	ViewBag.MainDivClass = "col-lg-4 offset-lg-4";
+	Layout = "~/Views/Shared/_LayoutAccount.cshtml";
 }
 
-<h1>@ViewData["Title"]</h1>
-<div>
-    <div class="text-center">
-        <section>
-            <form id="account" method="post">
-                <h2>Use a local account to log in.</h2>
-                <hr />
-                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-                <div class="form-floating">
-                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" />
-                    <label asp-for="Input.Email" class="form-label"></label>
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
-                </div>
-                <div class="form-floating">
-                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" />
-                    <label asp-for="Input.Password" class="form-label"></label>
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
-                </div>
-                <div>
-                    <div class="checkbox">
-                        <label asp-for="Input.RememberMe" class="form-label">
-                            <input class="form-check-input" asp-for="Input.RememberMe" />
-                            @Html.DisplayNameFor(m => m.Input.RememberMe)
-                        </label>
-                    </div>
-                </div>
-                <div>
-                    <button id="login-submit" type="submit" class="w-100 btn btn-lg btn-primary">Log in</button>
-                </div>
-                <div>
-                    <p>
-                        <a id="forgot-password" asp-page="./ForgotPassword">Forgot your password?</a>
-                    </p>
-                    <p>
-                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl">Register as a new user</a>
-                    </p>
-                </div>
-            </form>
-        </section>
-    </div>
-</div>
+<form id="account" method="post" style="margin-top: 80px">
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+	<div class="md-form md-outline form-lg">
+		<label asp-for="Input.Email" class="form-lg" style="font-size: 16px"></label>
+		<input asp-for="Input.Email" class="form-control form-control-lg" autocomplete="username" aria-required="true" style="font-size: 16px" />
+		<span asp-validation-for="Input.Email" class="field-validation-valid text-danger" style="font-size: 16px"></span>
+	</div>
+	<div class="form-lg md-form md-outline">
+		<label asp-for="Input.Password" class="form-lg" style="font-size: 16px"></label>
+		<input asp-for="Input.Password" class="form-control form-control-lg" style="font-size: 16px" />
+		<span asp-validation-for="Input.Password" class="field-validation-valid text-danger" style="font-size: 16px"></span>
+	</div>
+	<p>
+		<a href="./ForgotPassword" style="text-decoration: none;">Forgot your password?</a>
+		<br />
+		If your email is not confirmed,
+		<a href="./ResendEmailConfirmation" style="text-decoration: none;">click here</a>
+		to resend email.
+	</p>
+	<br />
+	<br />
+	<br />
+	<div style="flex-flow: row;display: flex;justify-content: space-between;align-items: center;">
+		<a href="./Register" style="font-weight: bolder; text-decoration: none;">Create Account</a>
 
+		<button type="submit" value="Log in" class="btn account-btn btn-md waves-effect waves-light">
+			Login
+		</button>
+	</div>
+	<br />
+</form>
 @section Scripts {
-    <partial name="_ValidationScriptsPartial" />
+	<partial name="_ValidationScriptsPartial" />
 }
