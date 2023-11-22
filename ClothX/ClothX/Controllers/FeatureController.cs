@@ -1,162 +1,211 @@
-﻿using ClothX.DbModels;
+﻿using ClothX.CustomAttributes;
+using ClothX.DbModels;
+using ClothX.Services;
+using ClothX.Utility;
+using Microsoft.AspNetCore.Http.Features;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Org.BouncyCastle.Bcpg.Sig;
 
 namespace ClothX.Controllers
 {
-	public class FeatureController : Controller
-	{
-		public IActionResult Index()
-		{
-			ClothXDbContext db = new ClothXDbContext();
-			var features = db.FeatureGroups.ToList();
-			return View(features);
-		}
+    public class FeatureController : Controller
+    {
+        [ClothXPermissionAuthorize("FeatureGroups")]
+        public IActionResult Index()
+        {
+            try
+            {
+                List<FeatureGroup> features = FeaturesUtility.Instance.GetFeatures();
+                return View(features);
+            }
+            catch (Exception ex)
+            {
+                ErrorLogger.Instance.ErrorLoggingFunction(ex.Message, this.ToString());
 
-		public IActionResult Create(int Id = 0)
-		{
-			ViewBag.Id = Id;
-			if (Id != 0)
-			{
-				ClothXDbContext db = new ClothXDbContext();
-				var feature = db.FeatureGroups.Find(Id);
-				return PartialView("FeatureGroupCreateEditPartialView", feature);
-			}
-			return PartialView("FeatureGroupCreateEditPartialView");
-		}
-		[HttpPost]
-		public IActionResult Create(FeatureGroup model)
-		{
-			ClothXDbContext db = new ClothXDbContext();
-			if (model.Id == 0)
-			{
-				model.AddedOn = DateTime.Now;
-				model.AddedBy = User.Identity.Name;
-				model.UpdatedOn = DateTime.Now;
-				model.IsActive = true;
-
-				db.FeatureGroups.Add(model);
-				db.SaveChanges();
-			}
-			else
-			{
-				var existing = db.FeatureGroups.Find(model.Id);
-				existing.Name = model.Name;
-				existing.UpdatedOn = DateTime.Now;
-
-				db.FeatureGroups.Update(existing);
-				db.SaveChanges();
-			}
-
-			return RedirectToAction(nameof(Index));
-
-		}
-
-		public async Task<IActionResult> Delete(int? id)
-		{
-			if (id == null)
-			{
-				return NotFound();
-			}
-			ClothXDbContext db = new ClothXDbContext();
-			var featureGroup = await db.FeatureGroups
-				.FirstOrDefaultAsync(m => m.Id == id);
-			if (featureGroup == null)
-			{
-				return NotFound();
-			}
-
-			featureGroup.IsActive = !featureGroup.IsActive;
-			featureGroup.UpdatedOn = DateTime.Now;
-			db.FeatureGroups.Update(featureGroup);
-			db.SaveChanges();
-
-			return RedirectToAction(nameof(Index));
-		}
-
-		public async Task<IActionResult> Details(int? id)
-		{
-			if (id == null)
-			{
-				return NotFound();
-			}
-			ClothXDbContext db = new ClothXDbContext();
-			var featureGroup = await db.FeatureGroups.FirstOrDefaultAsync(m => m.Id == id);
-			if (featureGroup == null)
-			{
-				return NotFound();
-			}
+                return RedirectToAction("ServerError", "Error");
+            }
+        }
 
 
-			return View(featureGroup);
-		}
-		[HttpGet]
-		public IActionResult CreateFeature(string Id = "")
-		{
-			var ids = Id.Split(".");
-			ViewBag.FeatureGroupId = Convert.ToInt32(ids[0]);
-			ViewBag.Id = ids.Length == 2 ? Convert.ToInt32(ids[1]) : 0;
-			if (ids.Length == 2)
-			{
-				if (ids[1] != "0")
-				{
-					ClothXDbContext db = new ClothXDbContext();
-					var feature = db.Features.Find(Convert.ToInt32(ids[1]));
-					return PartialView("FeatureCreateEditPartialView", feature);
-				}
-			}
 
-			return PartialView("FeatureCreateEditPartialView");
-		}
+        [ClothXPermissionAuthorize("FeatureGroups")]
+        public IActionResult Create(int Id = 0)
+        {
+            try
+            {
+                ViewBag.Id = Id;
+                if (Id != 0)
+                {
+                    FeatureGroup? feature = FeaturesUtility.Instance.FindFeatureGroup(Id);
+                    return PartialView("FeatureGroupCreateEditPartialView", feature);
+                }
+                return PartialView("FeatureGroupCreateEditPartialView");
+            }
+            catch (Exception ex)
+            {
+                ErrorLogger.Instance.ErrorLoggingFunction(ex.Message, this.ToString());
 
-		public IActionResult CreateFeature(Feature model)
-		{
-			ClothXDbContext db = new ClothXDbContext();
-			if (model.Id == 0)
-			{
-				model.AddedOn = DateTime.Now;
-				model.AddedBy = User.Identity.Name;
-				model.UpdatedOn = DateTime.Now;
-				model.IsActive = true;
+                return RedirectToAction("ServerError", "Error");
+            }
 
-				db.Features.Add(model);
-				db.SaveChanges();
-			}
-			else
-			{
-				var existing = db.Features.Find(model.Id);
-				existing.Name = model.Name;
-				existing.Description = model.Description;
-				existing.Price = model.Price;
-				existing.UpdatedOn = DateTime.Now;
+        }
+        [HttpPost]
+        [ClothXPermissionAuthorize("FeatureGroups")]
+        public IActionResult Create(FeatureGroup model)
+        {
+            try
+            {
+                if (model.Id == 0)
+                {
+                    FeaturesUtility.Instance.AddFeatureGroup(model, User.Identity.Name);
+                }
+                else
+                {
+                    FeaturesUtility.Instance.EditFeatureGroup(model);
+                }
 
-				db.Features.Update(existing);
-				db.SaveChanges();
-			}
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                ErrorLogger.Instance.ErrorLoggingFunction(ex.Message, this.ToString());
 
-			return RedirectToAction(nameof(Details), new { id = model.FeatureGroupId });
-		}
+                return RedirectToAction("ServerError", "Error");
+            }
+        }
 
-		public async Task<IActionResult> DeleteFeature(int? id)
-		{
-			if (id == null)
-			{
-				return NotFound();
-			}
-			ClothXDbContext db = new ClothXDbContext();
-			var feature = await db.Features
-				.FirstOrDefaultAsync(m => m.Id == id);
-			if (feature == null)
-			{
-				return NotFound();
-			}
 
-			feature.IsActive = !feature.IsActive;
-			feature.UpdatedOn = DateTime.Now;
-			db.Features.Update(feature);
-			db.SaveChanges();
 
-			return RedirectToAction(nameof(Details), new { id = feature.FeatureGroupId });
-		}
-	}
+        [ClothXPermissionAuthorize("FeatureGroups")]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            try
+            {
+                if (id == null)
+                {
+                    return NotFound();
+                }
+
+                await FeaturesUtility.Instance.DeleteFeatureGroup(id);
+
+                return RedirectToAction(nameof(Index));
+            }
+            catch (Exception ex)
+            {
+                ErrorLogger.Instance.ErrorLoggingFunction(ex.Message, this.ToString());
+
+                return RedirectToAction("ServerError", "Error");
+            }
+        }
+
+        [ClothXPermissionAuthorize("Feature")]
+        public async Task<IActionResult> Details(int? id)
+        {
+            try
+            {
+                if (id == null)
+                {
+                    return NotFound();
+                }
+                var featureGroup = FeaturesUtility.Instance.FindFeatureGroup((int)id);
+                if (featureGroup == null)
+                {
+                    return NotFound();
+                }
+
+
+                return View(featureGroup);
+            }
+            catch (Exception ex)
+            {
+                ErrorLogger.Instance.ErrorLoggingFunction(ex.Message, this.ToString());
+
+                return RedirectToAction("ServerError", "Error");
+            }
+        }
+        [HttpGet]
+        [ClothXPermissionAuthorize("Feature")]
+        public IActionResult CreateFeature(string Id = "")
+        {
+            try
+            {
+                var ids = Id.Split(".");
+                ViewBag.FeatureGroupId = Convert.ToInt32(ids[0]);
+                ViewBag.Id = ids.Length == 2 ? Convert.ToInt32(ids[1]) : 0;
+                if (ids.Length == 2)
+                {
+                    if (ids[1] != "0")
+                    {
+                        Feature? feature = FeaturesUtility.Instance.FindFeature(Convert.ToInt32(ids[1]));
+                        if (feature == null)
+                        {
+                            return NotFound();
+                        }
+                        return PartialView("FeatureCreateEditPartialView", feature);
+                    }
+                }
+
+                return PartialView("FeatureCreateEditPartialView");
+            }
+            catch (Exception ex)
+            {
+                ErrorLogger.Instance.ErrorLoggingFunction(ex.Message, this.ToString());
+
+                return RedirectToAction("ServerError", "Error");
+            }
+        }
+
+
+
+        [ClothXPermissionAuthorize("Feature")]
+        public IActionResult CreateFeature(Feature model)
+        {
+            try
+            {
+                if (model.Id == 0)
+                {
+                    FeaturesUtility.Instance.Addfeature(model, User.Identity.Name);
+                }
+                else
+                {
+                    FeaturesUtility.Instance.EditFeature(model);
+                }
+
+                return RedirectToAction(nameof(Details), new { id = model.FeatureGroupId });
+            }
+            catch (Exception ex)
+            {
+                ErrorLogger.Instance.ErrorLoggingFunction(ex.Message, this.ToString());
+
+                return RedirectToAction("ServerError", "Error");
+            }
+        }
+
+
+
+        [ClothXPermissionAuthorize("Feature")]
+        public async Task<IActionResult> DeleteFeature(int? id)
+        {
+            try
+            {
+                if (id == null)
+                {
+                    return NotFound();
+                }
+
+                Feature? feature = await FeaturesUtility.Instance.DeleteFeature(id);
+
+                return RedirectToAction(nameof(Details), new { id = feature.FeatureGroupId });
+            }
+            catch (Exception ex)
+            {
+                ErrorLogger.Instance.ErrorLoggingFunction(ex.Message, this.ToString());
+
+                return RedirectToAction("ServerError", "Error");
+            }
+        }
+
+
+    }
 }

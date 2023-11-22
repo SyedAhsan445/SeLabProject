@@ -23,15 +23,15 @@ namespace ClothX.Utility
 		public string GetLayout(ClaimsPrincipal? User)
 		{
 			string layout = "~/Views/Shared/_Layout.cshtml";
-			string dashboardLayout = "~/Views/Shared/_LayoutDashboard.cshtml";
-			if (User == null)
-			{
-				return layout;
-			}
-			if (User.IsInRole(RoleType.Tailor.ToString()))
-			{
-				return layout;
-			}
+			//string dashboardLayout = "~/Views/Shared/_LayoutDashboard.cshtml";
+			//if (User == null)
+			//{
+			//	return layout;
+			//}
+			//if (User.IsInRole(RoleType.Tailor.ToString()))
+			//{
+			//	return layout;
+			//}
 
 			return layout;
 		}

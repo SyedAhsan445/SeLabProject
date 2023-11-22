@@ -6,10 +6,11 @@ namespace ClothX.DbModels
     public partial class Log
     {
         public int Id { get; set; }
-        public DateTime? Date { get; set; }
-        public string? Level { get; set; }
-        public string? Message { get; set; }
-        public string? Machinename { get; set; }
+        public string MachineName { get; set; } = null!;
+        public DateTime Logged { get; set; }
+        public string Level { get; set; } = null!;
+        public string Message { get; set; } = null!;
         public string? Logger { get; set; }
+        public string? Exception { get; set; }
     }
 }

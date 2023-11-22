@@ -19,6 +19,7 @@
           "Microsoft.EntityFrameworkCore.Tools": "6.0.23",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "6.0.16",
           "NLog": "5.2.5",
+          "NLog.Database": "5.2.5",
           "NLog.Extensions.Logging": "5.3.5",
           "NLog.Web.AspNetCore": "5.3.5",
           "Newtonsoft.Json": "13.0.3",
@@ -1744,6 +1745,17 @@
       "NLog/5.2.5": {
         "runtime": {
           "lib/netstandard2.0/NLog.dll": {
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.2.5.2160"
+          }
+        }
+      },
+      "NLog.Database/5.2.5": {
+        "dependencies": {
+          "NLog": "5.2.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/NLog.Database.dll": {
             "assemblyVersion": "5.0.0.0",
             "fileVersion": "5.2.5.2160"
           }
@@ -3741,6 +3753,13 @@
       "sha512": "sha512-mMXtbAxfNzqkXcBjhJ3wN3rH7kwUZ0JL0GrUBI/lso7+tQ/HC4e5SnlmR3R5qQ9zWbqMbjxeH37rIf0yQGWTiA==",
       "path": "nlog/5.2.5",
       "hashPath": "nlog.5.2.5.nupkg.sha512"
+    },
+    "NLog.Database/5.2.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mipMfOTqD+wyX7UqffJ0dOw3sHr+6D0AzWLQUiqpmQzNV+xg8kNRuD0zbyQivfN8kdFaBi+Sr/Ox4PiGIZ84Wg==",
+      "path": "nlog.database/5.2.5",
+      "hashPath": "nlog.database.5.2.5.nupkg.sha512"
     },
     "NLog.Extensions.Logging/5.3.5": {
       "type": "package",

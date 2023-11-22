@@ -1,4 +1,5 @@
-﻿using ClothX.DbModels;
+﻿using ClothX.CustomAttributes;
+using ClothX.DbModels;
 using ClothX.Models;
 using ClothX.Services;
 using ClothX.Utility;
@@ -38,10 +39,9 @@ namespace ClothX.Controllers
             return View();
         }
 
-
+        [ClothXPermissionAuthorize("Feedback.Add")]
         public IActionResult Feedback(string url)
         {
-            //ViewBag.CurrentUrl = url;
             ViewData["CurrentUrl"] = url;
             return PartialView("FeedbackPartialView");
         }
