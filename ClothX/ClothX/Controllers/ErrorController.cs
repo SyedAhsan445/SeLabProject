@@ -4,12 +4,14 @@ namespace ClothX.Controllers
 {
     public class ErrorController : Controller
     {
-        public IActionResult Index()
+
+        // Action to display the server error page
+        public IActionResult ServerError()
         {
             return View();
         }
-
-        public IActionResult ServerError()
+        // Action to display the not found page
+        public IActionResult NotFound()
         {
             return View();
         }

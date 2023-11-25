@@ -49,8 +49,8 @@
       "PackagePath": "staticwebassets\\css\\Profile.css"
     },
     {
-      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\css\\serverError.css",
-      "PackagePath": "staticwebassets\\css\\serverError.css"
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\css\\error.css",
+      "PackagePath": "staticwebassets\\css\\error.css"
     },
     {
       "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\css\\site.css",
@@ -225,8 +225,8 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\js\\serverError.js",
-      "PackagePath": "staticwebassets\\js\\serverError.js"
+      "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\js\\error.js",
+      "PackagePath": "staticwebassets\\js\\error.js"
     },
     {
       "Id": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\js\\site.js",

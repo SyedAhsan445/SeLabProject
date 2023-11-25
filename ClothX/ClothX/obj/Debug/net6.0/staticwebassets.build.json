@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MSEO9GYAHHfPIsZMKizC/uf1b847id3eEJ4nHOyZTWE=",
+  "Hash": "GFj6YD3puHm72VwF18w7uYbkhyNWNZYGxj8vbAQwhIQ=",
   "Source": "ClothX",
   "BasePath": "_content/ClothX",
   "Mode": "Default",
@@ -1071,6 +1071,23 @@
       "OriginalItemSpec": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ClothX.bundle.scp.css"
     },
     {
+      "Identity": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\css\\error.css",
+      "SourceId": "ClothX",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\",
+      "BasePath": "_content/ClothX",
+      "RelativePath": "css/error.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\error.css"
+    },
+    {
       "Identity": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\css\\Profile.css",
       "SourceId": "ClothX",
       "SourceType": "Discovered",
@@ -1086,23 +1103,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Profile.css"
-    },
-    {
-      "Identity": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\css\\serverError.css",
-      "SourceId": "ClothX",
-      "SourceType": "Discovered",
-      "ContentRoot": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\",
-      "BasePath": "_content/ClothX",
-      "RelativePath": "css/serverError.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\serverError.css"
     },
     {
       "Identity": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\css\\site.css",
@@ -2006,12 +2006,12 @@
       "OriginalItemSpec": "wwwroot\\Images\\UserImages\\55f49959-619a-488d-932d-4e7b2732eece.jpeg"
     },
     {
-      "Identity": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\js\\serverError.js",
+      "Identity": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\js\\error.js",
       "SourceId": "ClothX",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\",
       "BasePath": "_content/ClothX",
-      "RelativePath": "js/serverError.js",
+      "RelativePath": "js/error.js",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -2020,7 +2020,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\serverError.js"
+      "OriginalItemSpec": "wwwroot\\js\\error.js"
     },
     {
       "Identity": "D:\\Semester5\\Software Enginnering\\Lab\\Developer\\SeLabProject\\ClothX\\ClothX\\wwwroot\\js\\site.js",
