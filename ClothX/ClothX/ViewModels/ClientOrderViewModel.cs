@@ -30,7 +30,8 @@ namespace ClothX.ViewModels
         public DateTime Deadline { get; set; }
 
         public IFormFileCollection? ideaImages { get; set; }
-
+        [Required]
+        [Range(1, 100000)]
         public int Price { get; set; }
 
         public virtual UserProfile Client { get; set; } = null!;
