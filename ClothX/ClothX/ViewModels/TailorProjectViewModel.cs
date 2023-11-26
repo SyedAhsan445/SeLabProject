@@ -1,24 +1,28 @@
 ﻿using ClothX.DbModels;
+using System.ComponentModel.DataAnnotations;
 
 namespace ClothX.ViewModels
 {
-	public class TailorProjectViewModel
-	{
-		public int Id { get; set; }
-		public string Title { get; set; } = null!;
-		public string? Description { get; set; }
-		public int ProductCategoryId { get; set; }
-		public DateTime AddedOn { get; set; }
-		public DateTime? UpdatedOn { get; set; }
-		public string AddedBy { get; set; } = null!;
-		public bool? IsActive { get; set; }
-		public string? ImagePath { get; set; }
+    public class TailorProjectViewModel
+    {
+        public int Id { get; set; }
+        [Required]
+        public string Title { get; set; } = null!;
+        public string? Description { get; set; }
+        [Required]
+        public int ProductCategoryId { get; set; }
+        public DateTime AddedOn { get; set; }
+        public DateTime? UpdatedOn { get; set; }
+        public string AddedBy { get; set; } = null!;
+        public bool? IsActive { get; set; }
+        [Required]
+        public string? ImagePath { get; set; }
+        [Required]
+        public string CategoryName { get; set; } = null!;
 
-		public string CategoryName { get; set; } = null!;
+        public IFormFile? image { get; set; }
 
-		public IFormFile? image { get; set; }
-
-		public IFormFileCollection? projectImages { get; set; }
-		public virtual ICollection<TailorProjectImage> TailorProjectImages { get; set; }
-	}
+        public IFormFileCollection? projectImages { get; set; }
+        public virtual ICollection<TailorProjectImage> TailorProjectImages { get; set; }
+    }
 }

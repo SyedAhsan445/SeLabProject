@@ -7,8 +7,6 @@ namespace ClothX.DbModels
     {
         public UserProfile()
         {
-            ChatMessageSentByNavigations = new HashSet<ChatMessage>();
-            ChatMessageSentToNavigations = new HashSet<ChatMessage>();
             ClientOrders = new HashSet<ClientOrder>();
             Reviews = new HashSet<Review>();
         }
@@ -26,8 +24,6 @@ namespace ClothX.DbModels
         public string? PhoneNumber { get; set; }
 
         public virtual AspNetUser User { get; set; } = null!;
-        public virtual ICollection<ChatMessage> ChatMessageSentByNavigations { get; set; }
-        public virtual ICollection<ChatMessage> ChatMessageSentToNavigations { get; set; }
         public virtual ICollection<ClientOrder> ClientOrders { get; set; }
         public virtual ICollection<Review> Reviews { get; set; }
     }
